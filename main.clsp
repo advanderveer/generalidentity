@@ -1,0 +1,6 @@
+(mod (password new_puz_hash amount) 
+    (if (= (sha256 password) 0x2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae) 
+        (list (list 51 new_puz_hash amount))
+        (x "invalid password")
+    )
+)
